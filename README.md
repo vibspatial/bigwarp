@@ -35,7 +35,11 @@ A dialog like this will appear:
 
 ![bdv](docs/create_bdv_dataset_bioformats.png)
 
-IMPORTANT: Make sure to set the `Plane Origin Convertion` to `TOP LEFT`!
+Add the file you want to use as fixed reference, and the files that need to be registered to this reference.
+
+IMPORTANT: *Make sure to set the `Plane Origin Convention` to `TOP LEFT`!*
+
+The plane origin convention influences the coordinate system that will be used for representing landmark coordinates, but surprisingly, it also seems to influence what part of the images will be warped. If it is set to "middle", then only the bottom left quadrant of the images seems to be saved to .zarr (!).
 
 ## Launch Bigwarp
 
