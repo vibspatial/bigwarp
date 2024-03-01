@@ -66,9 +66,15 @@ Fill in the export parameters as in the example dialog below:
 
 ![bdv](docs/export_moving_image.png)
 
-- threads: The number of threads should be adapted to the hardware that Bigwarp is running one. Set it to a few cores less than the number of logical cores of the computer.
+- threads
+
+  The number of threads should be adapted to the hardware that Bigwarp is running on. Set it to a few cores less than the number of logical cores of the computer.
 - File or n5 root: c:\full\path\to\warped_output.zarr
+
+  Specify the path where the zarr should be saved to. It must end in `.zarr` to trigger zarr creation.
 - n5 dataset: warped
+
+  The dataset name is the name of the image "group" inside the zarr archive. Zarrs can hold multiple image groups, but we will only write one, so for our purpose it is not very relevant. Set it to a simple string, like "warped" or so.
 - n5 block size: 2048
 - n5 compression: gzip
 
