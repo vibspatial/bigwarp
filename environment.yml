@@ -10,4 +10,3 @@ dependencies:
     - dask-image
     - numpy
     - scikit-image
-    # - spatial-image
