@@ -22,8 +22,16 @@ and for Bigwarp:
 - Fiji.app/jars/bigdataviewer-playground-0.8.1.jar
 - Fiji.app/jars/bigdataviewer-biop-tools-0.8.2.jar
 
-(Enable the `PTBIOP` update site in Fiji to download Bigdataviewer and Bigwarp.)
+<details>
+  <summary><b>Detailed installation steps:</b></summary>
 
+  1. Install [Fiji 1.54f](https://imagej.net/software/fiji/downloads)
+  2. In Fiji, go to `Help > Update...`
+  3. Click on `Manage Update Sites`
+      * Enable `PTBIOP`
+  4. Click on `Apply and Close` and then on `Apply Changes` to install the Bigdataviewer and Bigwarp plugins.
+     
+</details>
 
 ## Creating a Bigwarp dataset
 
@@ -52,7 +60,7 @@ A dialog appears that allows you to specify the images to use as fixed reference
 
 ## Placing landmarks
 
-Place landmarks according to the Bigwarp documentation. Save your landmarks regularly via `Bigwarp window > File > Export Landmarks`.
+Place landmarks according to the Bigwarp documentation. Save your landmarks regularly via `Bigwarp window > File > Export Landmarks`. For a list of navigation and editing commands, press `F1` or read the [BigWarp documentation](https://imagej.net/plugins/bigwarp).
 
 ![bdv](docs/save_landmarks.png)
 
