@@ -20,22 +20,13 @@ We used the following versions of Fiji/ImageJ:
 and for BigWarp:
 
 - Fiji.app/jars/bigdataviewer-playground-0.8.1.jar
-- Fiji.app/jars/bigdataviewer-biop-tools-0.8.2.jar
+- Fiji.app/jars/bigdataviewer-biop-tools-0.8.3.jar
 
-<details>
-  <summary><b>Detailed installation steps:</b></summary>
-
-  1. Install [Fiji 1.54f](https://imagej.net/software/fiji/downloads)
-  2. In Fiji, go to `Help > Update...`
-  3. Click on `Manage Update Sites`
-      * Enable `PTBIOP`
-  4. Click on `Apply and Close` and then on `Apply Changes` to install the BigDataViewer and BigWarp plugins.
-     
-</details>
+You can download a zip archive with this exact combination of Fiji and BigWarp [here](https://objectstor.vib.be/s00-spatial.catalyst-team/sw/fiji-bigwarp/fiji-win64-bigwarp-rel1.zip). After downloading, unpack the zip file in any folder you like.
 
 ## Creating a Bigwarp dataset
 
-To create a dataset for use in Bigwarp, open this menu:
+To create a dataset for use in Bigwarp, start the Fiji version from the prerequisites above, and open this menu:
 
 `Plugins > BigDataViewer-Playground > BDVDataset > Create BDV Dataset [Bio-Formats]`
 
