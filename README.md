@@ -1,8 +1,8 @@
 # Bigwarp Zarr to OME TIFF
 
-This document describes how to export Zarr files from Bigwarp, and then convert them to single or multi-channel OME TIFF files.
+This document describes how to export Zarr-files from Bigwarp, and then convert them to single-channel OME-TIFF files.
 
-Exporting to .zarr seems to avoid problems that Bigwarp has when exporting "large" warped images, for example images with more than ~2 billion pixels.
+While it is also possible to export TIFF-files, occasionally you may experience an error that prohibits exporting (depending on the size and overlap of the input images) and the channel names will not be preserved upon exporting. Exporting to .zarr seems to avoid these problems, which typically occurs has when exporting "large" warped images, for example images with more than ~2 billion pixels. 
 
 ## Prerequisites
 
@@ -17,7 +17,7 @@ We used the following versions of Fiji/ImageJ:
 
 - ImageJ 1.54f
 
-and for Bigwarp:
+and for BigWarp:
 
 - Fiji.app/jars/bigdataviewer-playground-0.8.1.jar
 - Fiji.app/jars/bigdataviewer-biop-tools-0.8.2.jar
@@ -29,7 +29,7 @@ and for Bigwarp:
   2. In Fiji, go to `Help > Update...`
   3. Click on `Manage Update Sites`
       * Enable `PTBIOP`
-  4. Click on `Apply and Close` and then on `Apply Changes` to install the Bigdataviewer and Bigwarp plugins.
+  4. Click on `Apply and Close` and then on `Apply Changes` to install the BigDataViewer and BigWarp plugins.
      
 </details>
 
