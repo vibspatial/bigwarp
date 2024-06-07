@@ -51,7 +51,13 @@ A dialog appears that allows you to specify the images to use as fixed reference
 
 ## Placing landmarks
 
-Place landmarks according to the Bigwarp documentation. Save your landmarks regularly via `Bigwarp window > File > Export Landmarks`. For a list of navigation and editing commands, press `F1` or read the [BigWarp documentation](https://imagej.net/plugins/bigwarp).
+To register the moving image(s) to the fixed image, you will need to place landmarks until you get good alignment. Below, we will explain some general guidelines and tips, but for a full list of navigation and editing commands, press `F1` or read the [BigWarp documentation](https://imagej.net/plugins/bigwarp).
+
+- Go to `Setting > Brightness and Color` to adjust the visualization of your images.
+- Using left-click and drag, you can rotate one of the images until they are in the same orientation. You can use right-click and drag to pan (move) the image and the mouse wheel to zoom in and out until you find corresponding landmarks.
+- Enter landmark mode by pressing the space bar. You can now left-click a cell (or another recognizable feature) in one of the images and subsequently left-click the corresponding cell/feature in the other image. A landmark will now have been added to the Landmarks dialog. It is also possible to delete landmarks by right-clicking them in the Landmarks dialog. When you want move around, make sure to disable landmark mode by pressing the space bar again.
+- You will need at least 4 landmarks before you can warp the moving image onto the fixed image and assess the registration quality. Click on the title bar of the fixed or moving image and press F to display a fusion of both images. Press T to warp the moving image onto the fixed image. You will need to place many more landmarks to obtain a nice registration, but after the first 4 landmarks, you can more easily find the corresponding regions by clicking the title bar of one of the images and pressing Q to display the region corresponding to the window of the other image.
+- Save your landmarks regularly via `Bigwarp window > File > Export Landmarks`. If you need to stop and close Bigwarp, you can import these landmarks again at a later timepoint.
 
 ![bdv](docs/save_landmarks.png)
 
