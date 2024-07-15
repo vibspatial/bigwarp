@@ -97,5 +97,5 @@ Then, in the conda environment created earlier, convert the .zarr file to OME TI
 
 In some cases, exporting to Zarr may not work and you may want to export to TIFF instead (or do this in the first place). To export to TIFF, use the following settings (adjust the number of threads to a value appropriate for your computer):
 
-![bdv](docs/export_to_tiff.png)
+![bdv](docs/export_to_tiff.PNG)
 
