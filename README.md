@@ -2,7 +2,7 @@
 
 This document describes how to export Zarr-files from Bigwarp, and then convert them to single-channel OME-TIFF files.
 
-While it is also possible to export TIFF-files, occasionally you may experience an error that prohibits exporting (depending on the size and overlap of the input images) and the channel names will not be preserved upon exporting. Exporting to .zarr seems to avoid these problems, which typically occurs has when exporting "large" warped images, for example images with more than ~2 billion pixels. 
+While it is also possible to export TIFF-files, occasionally you may experience an error that prohibits exporting (depending on the size and overlap of the input images) and the channel names will not be preserved upon exporting. Exporting to .zarr seems to avoid these problems, which typically occurs has when exporting "large" warped images, for example images with more than ~2 billion pixels. However, note that we have also experienced issues with exporting to Zarr so sometimes it may be necessary to try to export to TIFF instead.
 
 ## Prerequisites
 
