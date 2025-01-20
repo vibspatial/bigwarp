@@ -19,10 +19,10 @@ We used the following version of Fiji/ImageJ:
 
 and for BigWarp:
 
-- Fiji.app/jars/bigdataviewer-playground-0.10.10.jar
-- Fiji.app/jars/bigdataviewer-biop-tools-0.10.9.jar
+- Fiji.app/jars/bigdataviewer-playground-0.8.1.jar
+- Fiji.app/jars/bigdataviewer-biop-tools-0.8.3.jar
 
-You can download a zip archive with this exact combination of Fiji and BigWarp [here](https://objectstor.vib.be/s00-spatial.catalyst-team/sw/fiji-bigwarp/fiji-win64-bigwarp-9.1.3.zip). After downloading, unpack the zip file in any folder you like.
+You can download a zip archive with this exact combination of Fiji and BigWarp [here](https://objectstor.vib.be/s00-spatial.catalyst-team/sw/fiji-bigwarp/fiji-win64-bigwarp-rel1.zip). After downloading, unpack the zip file in any folder you like.
 
 ## Creating a Bigwarp dataset
 
