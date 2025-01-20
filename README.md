@@ -1,28 +1,28 @@
 # Bigwarp Zarr to OME TIFF
 
-This document describes how to export Zarr-files from Bigwarp, and then convert them to single-channel OME-TIFF files.
+This document describes how to register images using Bigwarp and export them to either TIFF or Zarr. If exporting to Zarr, the documentation explains how to convert this file format into single-channel OME-TIFF files.
 
-While it is also possible to export TIFF-files, occasionally you may experience an error that prohibits exporting (depending on the size and overlap of the input images) and the channel names will not be preserved upon exporting. Exporting to .zarr seems to avoid these problems, which typically occurs has when exporting "large" warped images, for example images with more than ~2 billion pixels. However, note that we have also experienced issues with exporting to Zarr so sometimes it may be necessary to try to export to TIFF instead.
+While exporting TIFF-files is generally easier (since it does not require any conversion from Zarr to TIFF), the channel names will not be preserved and occasionally you may experience an error that prohibits succesfully exporting to TIFF. This error typically seems to occur when exporting "large" warped images (for example images with more than ~2 billion pixels). Exporting to Zarr seems to avoid this issue, but note that we have also experienced issues with exporting to Zarr so sometimes exporting to TIFF cannot be avoided.
 
 ## Prerequisites
 
-Create and activate a conda environment from the `environment.yml` file:
+Create and activate a conda environment from the `environment.yml` file (only necessary when exporting to Zarr):
 
 ```bash
 conda env create -f environment.yml
 conda activate zarr-ometiff
 ```
 
-We used the following versions of Fiji/ImageJ:
+We used the following version of Fiji/ImageJ:
 
 - ImageJ 1.54f
 
 and for BigWarp:
 
-- Fiji.app/jars/bigdataviewer-playground-0.8.1.jar
-- Fiji.app/jars/bigdataviewer-biop-tools-0.8.3.jar
+- Fiji.app/jars/bigdataviewer-playground-0.10.10.jar
+- Fiji.app/jars/bigdataviewer-biop-tools-0.10.9.jar
 
-You can download a zip archive with this exact combination of Fiji and BigWarp [here](https://objectstor.vib.be/s00-spatial.catalyst-team/sw/fiji-bigwarp/fiji-win64-bigwarp-rel1.zip). After downloading, unpack the zip file in any folder you like.
+You can download a zip archive with this exact combination of Fiji and BigWarp [here](https://objectstor.vib.be/s00-spatial.catalyst-team/sw/fiji-bigwarp/fiji-win64-bigwarp-9.1.3.zip). After downloading, unpack the zip file in any folder you like.
 
 ## Creating a Bigwarp dataset
 
