@@ -2,7 +2,7 @@
 
 This document describes how to register images using Bigwarp and export them to either TIFF or Zarr. If exporting to Zarr, the documentation explains how to convert this file format into single-channel OME-TIFF files.
 
-While exporting TIFF-files is generally easier (since it does not require any conversion from Zarr to TIFF), the channel names will not be preserved and occasionally you may experience an error that prohibits succesfully exporting to TIFF. This error typically seems to occur when exporting "large" warped images (for example images with more than ~2 billion pixels). Exporting to Zarr seems to avoid this issue, but note that we have also experienced issues with exporting to Zarr so sometimes exporting to TIFF cannot be avoided.
+While exporting TIFF-files is generally easier (since it does not require any conversion from Zarr to TIFF), the channel names will not be preserved and occasionally you may experience an error that prohibits succesfully exporting to TIFF. This error typically seems to occur when exporting "large" warped images (for example images with more than ~2 billion pixels). Exporting to Zarr seems to avoid this issue, but note that we have also experienced issues with exporting to Zarr so sometimes exporting to TIFF cannot be avoided. We would recommend to try TIFF first and only try Zarr when this does not work.
 
 ## Prerequisites
 
@@ -19,10 +19,10 @@ We used the following version of Fiji/ImageJ:
 
 and for BigWarp:
 
-- Fiji.app/jars/bigdataviewer-playground-0.8.1.jar
-- Fiji.app/jars/bigdataviewer-biop-tools-0.8.3.jar
+- Fiji.app/jars/bigdataviewer-playground-0.10.10.jar
+- Fiji.app/jars/bigdataviewer-biop-tools-0.10.9.jar
 
-You can download a zip archive with this exact combination of Fiji and BigWarp [here](https://objectstor.vib.be/s00-spatial.catalyst-team/sw/fiji-bigwarp/fiji-win64-bigwarp-rel1.zip). After downloading, unpack the zip file in any folder you like.
+You can download a zip archive with this exact combination of Fiji and BigWarp [here](https://objectstor.vib.be/s00-spatial.catalyst-team/sw/fiji-bigwarp/fiji-win64-bigwarp-9.1.3.zip). After downloading, unpack the zip file in any folder you like.
 
 ## Creating a Bigwarp dataset
 
@@ -53,7 +53,7 @@ A dialog appears that allows you to specify the images to use as fixed reference
 
 To register the moving image(s) to the fixed image, you will need to place landmarks until you get good alignment. Below, we will explain some general guidelines and tips, but for a full list of navigation and editing commands, press `F1` or read the [BigWarp documentation](https://imagej.net/plugins/bigwarp).
 
-- Go to `Setting > Brightness and Color` to adjust the visualization of your images.
+- Press `P` to open source card for editing source visualization modes, color, brightness, and contrast. Here, you can select which channels to visualize and adjust the brightness and contrast appropriately. For multi-channel images, it generally makes the most sense to use the single-source display mode instead of the single-group mode (second button labeled `Source` or `Group` in the `Display Modes` tab) and set the current channel to the DAPI channel (using the `current` radio button in the `Sources` tab).
 - Using left-click and drag, you can rotate one of the images until they are in the same orientation. You can use right-click and drag to pan (move) the image and the mouse wheel to zoom in and out until you find corresponding landmarks.
 - Enter landmark mode by pressing the space bar. You can now left-click a cell (or another recognizable feature) in one of the images and subsequently left-click the corresponding cell/feature in the other image. A landmark will now have been added to the Landmarks dialog. It is also possible to delete landmarks by right-clicking them in the Landmarks dialog. When you want move around, make sure to disable landmark mode by pressing the space bar again.
 - You will need at least 4 landmarks before you can warp the moving image onto the fixed image and assess the registration quality. Click on the title bar of the fixed or moving image and press F to display a fusion of both images. Press T to warp the moving image onto the fixed image. You will need to place many more landmarks to obtain a nice registration, but after the first 4 landmarks, you can more easily find the corresponding regions by clicking the title bar of one of the images and pressing Q to display the region corresponding to the window of the other image.
