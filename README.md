@@ -64,7 +64,7 @@ To register the moving image(s) to the fixed image, you will need to place landm
 
 ## Exporting the warped moving image to Zarr
 
-Once you are happy with the warped result shown interactively in Bigwarp, it is time to save the warped images. We will save to .zarr.
+Once you are happy with the warped result shown interactively in Bigwarp, it is time to save the warped images. Here, we will save to .zarr. IMPORTANT: Make sure your mpving image is switched to the transformed view (using the `T` key), otherwise Bigwarp will not actually export a warped version of your moving image (which seems to be a bug). We would recommend to carefully check your output file after using Bigwarp to be sure everything was exported correctly.
 
 `Bigwarp window > File > Export moving image` 
 
@@ -90,13 +90,13 @@ Press OK. Warping should start, and progress feedback will be shown in the Conso
 
 ## Converting Bigwarp Zarr to OME TIFF
 
-Once the .zarr file is saved from Bigwarp, you can quit Fiji.
+Once the .zarr file is saved from Bigwarp, you can quit Fiji. 
 
 Then, in the conda environment created earlier, convert the .zarr file to OME TIFF with `bigwarp-zarr-to-ometiff.ipynb'.
 
 ## ALTERNATIVELY: Exporting the warped moving image to TIFF
 
-In some cases, exporting to Zarr may not work and you may want to export to TIFF instead (or do this in the first place). To export to TIFF, use the following settings (adjust the number of threads to a value appropriate for your computer):
+In some cases, exporting to Zarr may not work and you may want to export to TIFF instead (or do this in the first place). To export to TIFF, use the settings below (adjust the number of threads to a value appropriate for your computer). IMPORTANT: Make sure your mpving image is switched to the transformed view (using the `T` key), otherwise Bigwarp will not actually export a warped version of your moving image (which seems to be a bug). We would recommend to carefully check your output file after using Bigwarp to be sure everything was exported correctly.
 
 ![bdv](docs/export_to_tiff.PNG)
 
