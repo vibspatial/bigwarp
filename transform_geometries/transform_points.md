@@ -10,7 +10,7 @@ This document describes how you can transform a series of XY coordinates from a 
     - Select the CSV containing your XY coordinates.
     - Pick a path to save the output CSV.
     - Specify which columns correspond to the X and Y coordinates (usually `x` and `y`).
-    - Choose names for the output columns (e.g. `x_warped`, `y_warped`).
+    - Choose names for the output columns (e.g. `x_warped`, `y_warped`). You can overwrite the input coordinate columns by picking those names (e.g. `x` and `y`).
     - Pick the transformation model (e.g. Thin Plate Spline, Affine, ...).
     - Apply scaling to the moving and/or fixed landmark coordinates if needed. Depending on how you use BigWarp, the landmark coordinates can be in pixels, micrometers, millimeters, ...
     - Optionally, swap the moving and fixed landmarks. If unchecked, the script will transform from moving image to fixed image. If checked, the transformation direction will be reversed.
